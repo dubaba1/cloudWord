@@ -1,0 +1,17 @@
+#! /bin/sh
+source ../config/env.sh
+db=duwenzheng
+tb=sina_origin
+$HIVE -e "
+use $db;
+CREATE external TABLE $tb(
+id string,
+title string,
+newsTime  string,
+content string
+)
+comment 'SinaNews content table'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n'
+STORED AS textfile;
+
+"

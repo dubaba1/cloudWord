@@ -1,0 +1,14 @@
+#!/bin/sh
+source ../config/env.sh
+db=duwenzheng
+tb=sina_seg_wc
+$HIVE -e"
+use $db;
+CREATE TABLE $tb(
+word string,
+freq int
+)
+comment 'sina seg wc'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
+STORED AS orcfile;
+"

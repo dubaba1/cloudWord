@@ -1,0 +1,10 @@
+#! /bin/bash
+source ../config/env.sh
+partition_name_array=`/home/duwenzheng/item2/deal/SinaNews.txt`
+db=duwenzheng
+tb=sinanews_org
+$HIVE -e "
+use $db;
+load data local inpath '/home/duwenzheng/item2/deal/SinaNews.txt' overwrite into table $tb;
+"
+
