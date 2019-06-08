@@ -1,0 +1,192 @@
+2019-03-06 09:29:41 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-03-06 09:29:41 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-03-06 09:29:41 INFO  File2Stream:29 - path to stream library/default.dic
+2019-03-06 09:29:41 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-03-06 09:29:43 INFO  Model:59 - load crf model ok ! use time :2599
+2019-03-06 09:29:43 INFO  CrfLibrary:82 - load crf use time:2613 path is : jar://crf.model
+2019-03-06 09:29:45 INFO  DATDictionary:54 - init core library ok use time : 1905
+2019-03-06 09:29:46 INFO  NgramLibrary:17 - init ngram ok use time :937
+2019-03-06 09:50:57 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-03-06 09:50:57 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-03-06 09:50:57 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-03-06 09:50:57 INFO  File2Stream:29 - path to stream library/default.dic
+2019-03-06 09:50:57 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-03-06 09:51:00 INFO  Model:59 - load crf model ok ! use time :2611
+2019-03-06 09:51:00 INFO  CrfLibrary:82 - load crf use time:2628 path is : jar://crf.model
+2019-03-06 09:51:02 INFO  DATDictionary:54 - init core library ok use time : 1944
+2019-03-06 09:51:02 INFO  NgramLibrary:17 - init ngram ok use time :655
+2019-03-06 10:00:13 INFO  test_fenci:14 - this is infor
+2019-03-06 10:00:16 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-03-06 10:00:16 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-03-06 10:00:16 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-03-06 10:00:16 INFO  File2Stream:29 - path to stream library/default.dic
+2019-03-06 10:00:16 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-03-06 10:00:19 INFO  Model:59 - load crf model ok ! use time :2543
+2019-03-06 10:00:19 INFO  CrfLibrary:82 - load crf use time:2561 path is : jar://crf.model
+2019-03-06 10:00:21 INFO  DATDictionary:54 - init core library ok use time : 1762
+2019-03-06 10:00:21 INFO  NgramLibrary:17 - init ngram ok use time :712
+2019-03-06 10:01:07 INFO  test_fenci:15 - this is infor
+2019-03-06 10:01:10 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-03-06 10:01:10 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-03-06 10:01:10 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-03-06 10:01:10 INFO  File2Stream:29 - path to stream library/default.dic
+2019-03-06 10:01:10 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-03-06 10:01:12 INFO  Model:59 - load crf model ok ! use time :2574
+2019-03-06 10:01:12 INFO  CrfLibrary:82 - load crf use time:2590 path is : jar://crf.model
+2019-03-06 10:01:14 INFO  DATDictionary:54 - init core library ok use time : 1719
+2019-03-06 10:01:15 INFO  NgramLibrary:17 - init ngram ok use time :725
+2019-03-06 10:01:25 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-03-06 10:01:25 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-03-06 10:01:25 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-03-06 10:01:25 INFO  File2Stream:29 - path to stream library/default.dic
+2019-03-06 10:01:25 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-03-06 10:01:28 INFO  Model:59 - load crf model ok ! use time :2405
+2019-03-06 10:01:28 INFO  CrfLibrary:82 - load crf use time:2422 path is : jar://crf.model
+2019-03-06 10:01:30 INFO  DATDictionary:54 - init core library ok use time : 1791
+2019-03-06 10:01:30 INFO  NgramLibrary:17 - init ngram ok use time :693
+2019-03-06 10:24:12 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-03-06 10:24:12 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-03-06 10:24:12 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-03-06 10:24:12 INFO  File2Stream:29 - path to stream library/default.dic
+2019-03-06 10:24:12 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-03-06 10:24:15 INFO  Model:59 - load crf model ok ! use time :2614
+2019-03-06 10:24:15 INFO  CrfLibrary:82 - load crf use time:2631 path is : jar://crf.model
+2019-03-06 10:24:17 INFO  DATDictionary:54 - init core library ok use time : 1980
+2019-03-06 10:24:18 INFO  NgramLibrary:17 - init ngram ok use time :766
+2019-03-06 10:26:33 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-03-06 10:26:33 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-03-06 10:26:33 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-03-06 10:26:33 INFO  File2Stream:29 - path to stream library/default.dic
+2019-03-06 10:26:33 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-03-06 10:26:36 INFO  Model:59 - load crf model ok ! use time :2772
+2019-03-06 10:26:36 INFO  CrfLibrary:82 - load crf use time:2792 path is : jar://crf.model
+2019-03-06 10:26:38 INFO  DATDictionary:54 - init core library ok use time : 2082
+2019-03-06 10:26:39 INFO  NgramLibrary:17 - init ngram ok use time :658
+2019-03-06 10:27:45 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-03-06 10:27:45 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-03-06 10:27:45 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-03-06 10:27:45 INFO  File2Stream:29 - path to stream library/default.dic
+2019-03-06 10:27:45 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-03-06 10:27:47 INFO  Model:59 - load crf model ok ! use time :2703
+2019-03-06 10:27:47 INFO  CrfLibrary:82 - load crf use time:2722 path is : jar://crf.model
+2019-03-06 10:27:49 INFO  DATDictionary:54 - init core library ok use time : 1900
+2019-03-06 10:27:50 INFO  NgramLibrary:17 - init ngram ok use time :717
+2019-03-06 10:28:24 INFO  weibo_fenci:14 - this is infor
+2019-03-06 10:28:28 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-03-06 10:28:28 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-03-06 10:28:28 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-03-06 10:28:28 INFO  File2Stream:29 - path to stream library/default.dic
+2019-03-06 10:28:28 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-03-06 10:28:31 INFO  Model:59 - load crf model ok ! use time :2786
+2019-03-06 10:28:31 INFO  CrfLibrary:82 - load crf use time:2807 path is : jar://crf.model
+2019-03-06 10:28:33 INFO  DATDictionary:54 - init core library ok use time : 1904
+2019-03-06 10:28:34 INFO  NgramLibrary:17 - init ngram ok use time :739
+2019-03-06 10:30:51 INFO  weibo_fenci:14 - this is infor
+2019-03-06 10:30:54 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-03-06 10:30:54 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-03-06 10:30:54 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-03-06 10:30:54 INFO  File2Stream:29 - path to stream library/default.dic
+2019-03-06 10:30:54 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-03-06 10:30:57 INFO  Model:59 - load crf model ok ! use time :2281
+2019-03-06 10:30:57 INFO  CrfLibrary:82 - load crf use time:2294 path is : jar://crf.model
+2019-03-06 10:30:58 INFO  DATDictionary:54 - init core library ok use time : 1782
+2019-03-06 10:30:59 INFO  NgramLibrary:17 - init ngram ok use time :634
+2019-03-06 16:12:03 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-03-06 16:12:03 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-03-06 16:12:03 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-03-06 16:12:03 INFO  File2Stream:29 - path to stream library/default.dic
+2019-03-06 16:12:03 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-03-06 16:12:06 INFO  Model:59 - load crf model ok ! use time :3196
+2019-03-06 16:12:06 INFO  CrfLibrary:82 - load crf use time:3238 path is : jar://crf.model
+2019-03-06 16:12:08 INFO  DATDictionary:54 - init core library ok use time : 2094
+2019-03-06 16:12:09 INFO  NgramLibrary:17 - init ngram ok use time :808
+2019-03-25 12:26:00 INFO  weibo_fenci:13 - this is infor
+2019-03-25 12:26:11 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-03-25 12:26:11 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-03-25 12:26:11 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-03-25 12:26:11 INFO  File2Stream:29 - path to stream library/default.dic
+2019-03-25 12:26:11 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:E:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-03-25 12:26:15 INFO  Model:59 - load crf model ok ! use time :3429
+2019-03-25 12:26:15 INFO  CrfLibrary:82 - load crf use time:3477 path is : jar://crf.model
+2019-03-25 12:26:17 INFO  DATDictionary:54 - init core library ok use time : 2199
+2019-03-25 12:26:18 INFO  NgramLibrary:17 - init ngram ok use time :790
+2019-04-17 18:08:29 INFO  weibo_fenci:13 - this is infor
+2019-04-17 18:08:33 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-04-17 18:08:33 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-04-17 18:08:33 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:D:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-04-17 18:08:33 INFO  File2Stream:29 - path to stream library/default.dic
+2019-04-17 18:08:33 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:D:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-04-17 18:08:34 INFO  Model:59 - load crf model ok ! use time :872
+2019-04-17 18:08:34 INFO  CrfLibrary:82 - load crf use time:878 path is : jar://crf.model
+2019-04-17 18:08:34 INFO  DATDictionary:54 - init core library ok use time : 319
+2019-04-17 18:08:35 INFO  NgramLibrary:17 - init ngram ok use time :653
+2019-04-17 18:09:02 INFO  weibo_fenci:13 - this is infor
+2019-04-17 18:09:04 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-04-17 18:09:04 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-04-17 18:09:04 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:D:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-04-17 18:09:04 INFO  File2Stream:29 - path to stream library/default.dic
+2019-04-17 18:09:04 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:D:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-04-17 18:09:05 INFO  Model:59 - load crf model ok ! use time :733
+2019-04-17 18:09:05 INFO  CrfLibrary:82 - load crf use time:738 path is : jar://crf.model
+2019-04-17 18:09:05 INFO  DATDictionary:54 - init core library ok use time : 300
+2019-04-17 18:09:05 INFO  NgramLibrary:17 - init ngram ok use time :589
+2019-04-17 18:09:22 INFO  weibo_fenci:13 - this is infor
+2019-04-17 18:09:24 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-04-17 18:09:24 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-04-17 18:09:24 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:D:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-04-17 18:09:24 INFO  File2Stream:29 - path to stream library/default.dic
+2019-04-17 18:09:24 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:D:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-04-17 18:09:25 INFO  Model:59 - load crf model ok ! use time :736
+2019-04-17 18:09:25 INFO  CrfLibrary:82 - load crf use time:739 path is : jar://crf.model
+2019-04-17 18:09:25 INFO  DATDictionary:54 - init core library ok use time : 294
+2019-04-17 18:09:25 INFO  NgramLibrary:17 - init ngram ok use time :643
+2019-04-25 15:23:53 INFO  weibo_fenci:13 - this is infor
+2019-04-25 15:23:59 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-04-25 15:23:59 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-04-25 15:23:59 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:D:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-04-25 15:23:59 INFO  File2Stream:29 - path to stream library/default.dic
+2019-04-25 15:23:59 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:D:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-04-25 15:24:00 INFO  Model:59 - load crf model ok ! use time :831
+2019-04-25 15:24:00 INFO  CrfLibrary:82 - load crf use time:850 path is : jar://crf.model
+2019-04-25 15:24:00 INFO  DATDictionary:54 - init core library ok use time : 452
+2019-04-25 15:24:01 INFO  NgramLibrary:17 - init ngram ok use time :779
+2019-04-25 15:24:32 INFO  weibo_fenci:13 - this is infor
+2019-04-25 15:24:34 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-04-25 15:24:34 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-04-25 15:24:34 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:D:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-04-25 15:24:34 INFO  File2Stream:29 - path to stream library/default.dic
+2019-04-25 15:24:34 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:D:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-04-25 15:24:35 INFO  Model:59 - load crf model ok ! use time :944
+2019-04-25 15:24:35 INFO  CrfLibrary:82 - load crf use time:951 path is : jar://crf.model
+2019-04-25 15:24:35 INFO  DATDictionary:54 - init core library ok use time : 399
+2019-04-25 15:24:36 INFO  NgramLibrary:17 - init ngram ok use time :914
+2019-04-25 15:46:09 INFO  weibo_fenci:13 - this is infor
+2019-04-25 15:46:11 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-04-25 15:46:11 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-04-25 15:46:11 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:D:\eclipse-workspace\maven_weibo_yuqing\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-04-25 15:46:11 INFO  File2Stream:29 - path to stream library/default.dic
+2019-04-25 15:46:11 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:D:\eclipse-workspace\maven_weibo_yuqing\library\default.dic not found or can not to read, path: library/default.dic
+2019-04-25 15:46:12 INFO  Model:59 - load crf model ok ! use time :892
+2019-04-25 15:46:12 INFO  CrfLibrary:82 - load crf use time:900 path is : jar://crf.model
+2019-04-25 15:46:12 INFO  DATDictionary:54 - init core library ok use time : 410
+2019-04-25 15:46:13 INFO  NgramLibrary:17 - init ngram ok use time :787
+2019-05-19 14:46:34 INFO  weibo_fenci:13 - this is infor
+2019-05-19 14:46:38 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-05-19 14:46:38 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-05-19 14:46:38 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:D:\eclipse-workspace\Sinafenci\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-05-19 14:46:38 INFO  File2Stream:29 - path to stream library/default.dic
+2019-05-19 14:46:38 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:D:\eclipse-workspace\Sinafenci\library\default.dic not found or can not to read, path: library/default.dic
+2019-05-19 14:46:39 INFO  Model:59 - load crf model ok ! use time :757
+2019-05-19 14:46:39 INFO  CrfLibrary:82 - load crf use time:761 path is : jar://crf.model
+2019-05-19 14:46:39 INFO  DATDictionary:54 - init core library ok use time : 315
+2019-05-19 14:46:40 INFO  NgramLibrary:17 - init ngram ok use time :677
+2019-05-19 14:47:02 INFO  weibo_fenci:13 - this is infor
+2019-05-19 14:47:04 WARN  MyStaticValue:91 - not find library.properties in classpath use it by default !
+2019-05-19 14:47:04 INFO  File2Stream:29 - path to stream library/ambiguity.dic
+2019-05-19 14:47:04 ERROR AmbiguityLibrary:112 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/ambiguity.dic file:D:\eclipse-workspace\Sinafenci\library\ambiguity.dic not found or can not to read, path: library/ambiguity.dic
+2019-05-19 14:47:04 INFO  File2Stream:29 - path to stream library/default.dic
+2019-05-19 14:47:04 ERROR DicLibrary:195 - Init ambiguity library error :org.ansj.exception.LibraryException:  path :library/default.dic file:D:\eclipse-workspace\Sinafenci\library\default.dic not found or can not to read, path: library/default.dic
+2019-05-19 14:47:05 INFO  Model:59 - load crf model ok ! use time :702
+2019-05-19 14:47:05 INFO  CrfLibrary:82 - load crf use time:707 path is : jar://crf.model
+2019-05-19 14:47:05 INFO  DATDictionary:54 - init core library ok use time : 271
+2019-05-19 14:47:05 INFO  NgramLibrary:17 - init ngram ok use time :559
