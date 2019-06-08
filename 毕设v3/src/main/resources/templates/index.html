@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="ico/favicon.ico" />
+
+    <title>杜文正的主页</title>
+           <!--引入flexslider.css-->
+    <link href="//cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet" />
+    <!--引入jq-->
+    <script src="//cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <!--引入flexslider-min.js-->
+<script src="//cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>     
+    <script src="./js/bootstrap.min.js"></script>
+
+<link rel="icon" href="../images/logo2.png" type="image/x-icon"/>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.flexslider').flexslider({
+                animation: 'slide',                 // 必备参数，自动滑动
+                slideshowSpeed: 2000,              // 每次自动滑动间隔时间，默认为 7000，单位为 ms
+                animationSpeed: 1000,              // 手动点击滑动时间，默认为 600，单位为 ms
+                //itemWidth: 900                  // 定义每个 item 宽度，单位为 px，默认为 100%
+                slideshow: false,                //载入页面时，是否自动播放
+                directionNav: true             //是否显示左右控制按钮
+            })
+        })
+    </script>
+     <style>
+        body {
+            margin: 0; /*一定的初始化是必要的*/
+        }
+        nav {
+            position: fixed; /*因为是一个全页面的竖排导航，所以必须设置为固定定位*/
+            /*同时因为固定定位是把标签从文档中直接拿出来，所以布局其他元素时要用margin留出外边距，
+              必要时可以设置导航栏为固定宽度保证不会出现白边*/
+            background-color: #2f2f2f;
+            height: 100%; /*让导航栏与页面同高*/
+            top: 0px; left: 0; /*设置了固定定位后这两个属性才起作用*/
+        }
+        nav a { /*设置每个a标记的display属性为block，这样方便控制每个a标记的样式*/
+            font-weight: bold;
+            font-size: 18px;
+            color: #ffffff;
+            display: block;
+            padding: 30px;
+            text-decoration: none;
+        }
+        nav div a:first-child { /*通过伪类来控制活动页面的a标记的样式，作为静态页面每个页面都要写不同的css控制样式，
+        所以使用不方便的话可以使用class来控制样式*/
+            box-shadow: -1px 0.5px 4px 1px #777 inset;
+            background-color: #e58c7c;
+        }
+        nav div a:hover {
+            background-color: pink;
+        }
+        nav div a:active {
+            box-shadow: -1px 0.5px 4px 1px #777 inset;
+            background-color: pink;
+        }
+    </style>
+  </head>
+
+  <body >
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/" >首页</a>
+        </div>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/wordcloud.html" >词云展示</a>
+        </div>
+         <div class="navbar-header">
+          <a class="navbar-brand" href="/model2.html" >新闻数量</a>
+        </div>
+         <div class="navbar-header">
+          <a class="navbar-brand" href="/manger_login.html" >后台数据</a>
+        </div>
+                 <div class="navbar-header">
+          <a class="navbar-brand" href="/model1.html" >项目流程</a>
+        </div>
+      </div>
+    </div>
+	<div id="headerwrap">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-lg-offset-3">
+					<h4><font color="#FF6633">HELLO EVERYBODY, MY NAME IS</font></h4>
+					<h1 id="a1"><font color="#FF6633">杜文正</font></h1>
+					<h4><font color="#FF6633">HERE IS CHINA</font></h4>
+	
+				</div>
+			</div>
+	    </div> 
+	</div>
+
+
+	
+	
+	<nav>
+    <div>
+    <span style="height:600px" >ss</span>
+        <a href="#">页面导航</a>
+        <div>
+        <a href="#a1">作者</a>
+        </div>
+        <div>
+        <a href="#a2">搜索</a>
+        </div>
+        <div>
+        <a href="#a3">功能展示</a>
+        </div>
+        <div>
+        <a href="#a4">联系作者</a>
+        </div>
+    </div>
+</nav>
+	<div class="container" style="background-color:">
+			<div  style="background-color:">
+				<form action="/searchAction" method="post">
+					<div class="inputOuter2"  style="margin-bottom:20px;width:100%" align="right" >
+                    <input style="border-radius:4px" type="text" id="search" name="search" placeholder="输入搜索内容"  maxlength="16" />
+                		<button class="btn btn-primary block full-width m-b" id="a2"><i class="fa fa-search" aria-hidden="true"></i>搜索</button>
+                	</div>
+                </form>
+            </div>
+		<div class="row centered mt mb">
+			<h1 id="a3">信息展示</h1>
+			
+			<div class="flexslider slider">
+    <ul class="slides">
+        <li><div  align="center" style="width:400px;margin: 80px auto;">
+				<a href="/manger_login.html"><img src="images/portfolio/folio05.png" class="img-responsive" /></a>后台数据
+			</div></li>
+        <li><div  align="center" style="width:400px;margin: 80px auto;">
+				<a href="/wordcloud.html"><img src="images/portfolio/folio02.png" class="img-responsive" /></a>词云展示
+			</div></li>
+    
+        <li><div  align="center" style="width:400px;margin: 80px auto;">
+				<a href="/model2.html"><img src="images/portfolio/folio04.png" class="img-responsive" /></a>新闻数量
+			</div></li>
+		<li><div  align="center" style="width:400px;margin: 80px auto;">
+				<a href="/model1.html"><img src="images/portfolio/folio04.png" class="img-responsive" /></a>项目流程
+			</div></li>
+    </ul>
+
+
+</div>
+
+			
+			
+			
+			
+			<!--
+			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
+				<a href="../static/model/model4.html"><img src="images/portfolio/folio04.png" class="img-responsive" /></a>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
+				<a href="../static/model/model5.html"><img src="images/portfolio/folio05.png" class="img-responsive" /></a>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 gallery">
+				<a href="../static/model/model6.html"><img src="images/portfolio/folio06.png" class="img-responsive" /></a>
+			</div>
+			-->
+		</div>
+	</div>
+<center id="a4"><b>联系方式</b></center>
+	<div id="social">
+		<div class="container">
+			<div class="row centered">
+			<div class="col-lg-2">
+					<i class="fa fa-fast-backward"></i>
+				</div>
+			   <div class="col-lg-2">
+			   <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1723608131&amp;site=qq&amp;menu=yes"><i class="fa fa-qq"></i></a>
+				</div>
+				<div class="col-lg-2">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+				</div>
+				<div class="col-lg-2">
+					<a href="https://weibo.com/u/6389933789/home?wvr=5&amp;sudaref=graph.qq.com"><i class="fa fa-weibo"></i></a>
+				</div>
+				<div class="col-lg-2">
+					<a href="https://blog.csdn.net/Teacher_du/article/details/84990655"><i class="fa fa-github"></i></a>
+				</div>
+				
+				<div class="col-lg-2">
+					<i class="fa fa-fast-forward"></i>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+
+	<div id="footerwrap">
+		<div class="container">
+			<div class="row centered">
+				
+			
+				<div class="col-lg-4">
+					<p>河北科技大学</p>
+				</div>
+				<div class="col-lg-4">
+					<p>hello word</p>
+				</div>
+				<div class="col-lg-4">
+					<p>1802760754@qq.com</p>
+				</div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

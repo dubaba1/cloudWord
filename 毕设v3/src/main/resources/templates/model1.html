@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>dulaoc</title>
+    <!-- 引入 echarts.js -->
+    <link rel="icon" href="../images/logo2.png" type="image/x-icon"/>
+    
+    <link href="../static/css/body.css" rel="stylesheet" />
+<script src="../static/js/echarts.js"></script>
+ <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+</head>
+ 
+<body class="signin1">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+   <div class="container">
+   <div class="navbar-header">
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+       <span class="sr-only">Toggle navigation</span>
+     </button>
+     <a class="navbar-brand" href="/" >首页</a>
+   </div>
+
+ </div>
+</div>
+<div>
+ <div id="main1" style="width: 100%;height:700px; text-align:center"></div>
+</div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main1'));
+
+        // 指定图表的配置项和数据
+        var option = {
+        	    toolbox: {
+        	        show : true,
+        	        feature : {
+        	            mark : {show: true},
+        	            dataView : {show: true, readOnly: false},
+        	            restore : {show: true},
+        	            saveAsImage : {show: true,type:'png'}
+        	        }
+        	    },
+        		series: [
+        		         {
+        		           name: '树图',
+        		           type: 'tree',
+        		           orient: 'horizontal',  // vertical horizontal
+        		           rootLocation: { x: 300, y: 'center' }, // 根节点位置  {x: 100, y: 'center'}
+        		           nodePadding: 15,
+        		           layerPadding: 500,
+        		           hoverable: false,
+        		           roam: true,
+        		           symbolSize: 15,
+        		           initialTreeDepth:2,
+        		           itemStyle: {
+        		             normal: {
+        		               color: ['#00FF00'],
+        		               label: {
+        		                 show: true,
+        		                 position: 'right',
+        		                 formatter: '{b}',
+        		                 textStyle: {
+        		                   color: '#0000FF',
+        		                   fontSize: 15,
+        		                 },
+        		               },
+        		               lineStyle: {
+        		                 color: '#00FFFF',
+        		                 type: 'solid', // 'curve'|'broken'|'solid'|'dotted'|'dashed'
+
+        		               },
+        		             },
+        		             emphasis: {
+        		               color: '#A52A2A',
+        		               label: {
+        		                 show: true,
+        		               },
+        		               borderWidth: 0,
+        		             },
+        		           },
+
+        		           data: [
+        		             {
+        		               'name': '毕业设计', 'children': [
+        		                 { 'name': '数据采集' ,'children':[
+        		                                               {'name': '分析页面','children':[{'name':'数据是保存在get请求的json文件里面，而不是静态的HTML'}] },
+        		                      {
+        		                     'name': 'WebMagic爬虫',
+        		                     'isExpand':true,
+        		                     'children': [{ 'name': 'Downloader组件','children':[{'name':'从网上下载页面'}] }, { 'name': 'Pipeline组件' ,'children':[{'name':'持久化数据'}]}, { 'name': 'PageProcessor组件' ,'children':[{'name':'解析页面，提取信息(jsoup、xpath的soup)'}]}, { 'name': 'Scheduler组件','children':[{'name':'管理待抓取的url'}] }],
+        		                   },
+        		                   ]},
+        		                 { 'name': '数据处理' ,'children':[{'name':'原始数据存储在MySql','children':[{'name':'数据转移到hive'}]},]},
+        		                 {
+        		                   'name': '系统界面',
+        		                   'children': [{
+        		                     'name': '登录界面',
+        		                     'isExpand':true,
+        		                     'children': [{ 'name': '管理员登录' }, { 'name': '词云展示' }, { 'name': '新闻数量柱形图' }, { 'name': '网站流程图' }],
+        		                   },
+        		                   {'name':'注册界面'}
+        		                   ],
+        		                 },
+        		               ],
+        		             },
+        		           ],
+        		         }],
+        		     };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+
+ <!-- style="background: #18c8f6"  -->
+</body>
+</html>

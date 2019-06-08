@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>管理员</title>
+    <link rel="icon" href="../images/logo2.png" type="image/x-icon"/>
+    
+</head>
+<body bgcolor="#FFE4C4">
+<table cellspacing="0" cellpadding="0" width="70%" border="1px">
+        <tr>
+            <th>id</th>
+            <th>userid</th>
+            <th>username</th>
+            <th>password</th>
+             <th>userps</th>
+            <th>delete</th>
+
+        </tr>
+        <tr th:each="user:${users}"> 
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.userid}"></td>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.password}"></td>
+             <td th:text="${user.userps}"></td>
+            <td><a th:href="@{'/delete?id='+${user.id}}">删除</a></td>
+        </tr>
+       <!--tr th:each="user:${users}"> 
+             <td th:text="${user}"></td>
+            <td><a th:href="@{'/delete?id='+${user.id}}">删除</a></td>
+        </tr-->
+    </table>
+    <div>    <a href='/'>返回主页</a>
+    </div>
+     <div>    <a href='/login'>返回登录界面</a>
+    </div>
+</body>
+</html>

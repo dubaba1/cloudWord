@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+<title>- 杜文正</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+<script src="../js/jquery.min.js">
+	
+</script>
+
+<script>
+	$(document).ready(function() {
+		$("form").submit(function() {
+			alert("提交");
+		});
+	});
+
+	$(document).ready(function() {
+		$("input").keydown(function() {
+			$("input").css("background-color", "pink");
+		});
+		$("input").keyup(function() {
+			$("input").css("background-color", "pink");
+		});
+	});
+
+	$(document).ready(function() {
+		$(".m-t-md").mouseenter(function() {
+			$(".m-t-md").css("background-color", "pink");
+		});
+		$(".m-t-md").mouseleave(function() {
+			$(".m-t-md").css("background-color", "lightgray");
+		});
+	});
+</script>
+<script>
+	$(document).ready(function() {
+		$("#flip").click(function() {
+			$("#panel").slideToggle("slow");
+		});
+	});
+</script>
+<!-- <script>
+$(document).ready(function(){
+  $("input").parents().css({"color":"red","border":"2px solid red"});
+});
+</script> --> 
+<style type="text/css">
+#panel {
+	padding: 5px;
+	text-align: left;
+	/* 	background-color:#e5eecc; */
+	/* 	border:solid 1px #c3c3c3; */
+}
+
+#panel {
+	display: none;
+}
+#panel1 {
+	display: none;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+  $(".flip1").click(function(){
+    $("#panel1").slideDown(1000);
+	$("#panel1").slideUp(2000);
+  });
+  $("#stop").click(function(){
+    $("#panel1").stop();
+  });
+});
+</script>
+
+<link rel="icon" href="../images/logo2.png" type="image/x-icon" />
+
+<link rel="stylesheet" type="text/css" href="css/css_login.css" />
+<script>
+	if (window.top !== window.self) {
+		window.top.location = window.location;
+	}
+</script>
+</head>
+<body class="signin">
+
+	<div class="signinpanel">
+		<div class="row">
+			<div style="cursor:pointer">
+				<img id="flip" src="../images/logo2.png" width="50" height="50" />
+				<div id="panel">
+					<font color="blue">系统的图标</font>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<form role="form" action="/loginVerify" method="post">
+					<h3 class="no-margins">
+						<font color="black">
+							<p>
+								<font class="m-t-md" color="black">新浪信息可视化系统</font>
+							</p>
+						</font>
+					</h3>
+					<div class="inputOuter2" style="margin-bottom: 20px;">
+						<input  style="border-radius:4px" class="uname" type="text" id="username" name="username" placeholder="用户名"
+							maxlength="16" />
+							
+
+					</div>
+
+					<div class="inputOuter1" style="margin-bottom: 20px;">
+					<div class="flip1" style="margin-bottom: 20px;">
+						<input style="border-radius:4px" class="uname"  type="password" id="password" name="password"
+							placeholder="密码" maxlength="16" />
+							</div>
+							<div id="panel1"><font color="blue">请输入密码！</font></div>
+					</div>
+					<button type="submit" class="btn btn-primary block full-width m-b" style="background:rgba(24,144,255,1);margin-right:20px;cursor:pointer  " >登
+						录</button>
+
+					<a href="/register1.html"><button type="button" class="btn btn-primary block full-width m-b" style="background:rgba(24,144,255,1) ;color:rgba(255,255,255,1);" >
+						注册
+					</button></a>
+
+
+					<!-- <button type="button" name="lyp" id="button3" value="注册"  onclick="regist()"/>-->
+				</form>
+
+			</div>
+		</div>
+		<div class="signup-footer">
+			<div class="pull-left">
+				<font color="black">&copy; 杜文正</font>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+

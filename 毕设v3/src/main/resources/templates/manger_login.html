@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <title> - 杜文正</title>
+<script type="text/javascript">
+    /**
+     * 注册
+     */
+    function regist() {
+        // 如果需要在新窗口打开注册界面；
+         //window.open("register1.html");
+        // 如果需要在当前窗口打开登录界面
+        window.location.href = "register1.html";
+    }
+</script>
+    <link rel="stylesheet" type="text/css" href="css/css_login.css" />
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.location;
+        }
+    </script>
+    <link rel="icon" href="../images/logo2.png" type="image/x-icon"/>
+    
+</head>
+<body class="signin">
+    <div class="signinpanel">
+        <div class="row">
+        <div   align="left"  >
+				<img src="../images/logo2.png" width="50" height="50"/>
+			</div>
+            <div class="col-sm-12">
+            <form role="form" action="/manger_loginVerify" method="post">
+                <h3 class="no-margins"><font color="black"> <p class="m-t-md"><font color="black">管理员登录</font></p></font></h3>
+                <div class="inputOuter2"  style="margin-bottom:20px;">
+                    <input type="text" id="username" name="username" placeholder="用户名"  maxlength="16" />
+                </div>
+                <div class="inputOuter1"  style="margin-bottom:20px;">
+                    <input type="password" id="password"  name="password" placeholder="密码" maxlength="16"/>
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">登 录</button>
+            </form>
+            </div>
+        </div>
+        <div class="signup-footer">
+            <div class="pull-left">
+                <font color="black">&copy; 杜文正</font>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+

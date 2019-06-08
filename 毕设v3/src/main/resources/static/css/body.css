@@ -1,0 +1,14 @@
+.signin1{
+    background: #18c8f6;
+
+    height: auto;
+    background:url("../images/bg.jpg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+.week{
+	margin-top:50px;
+	text-alain:center;
+}

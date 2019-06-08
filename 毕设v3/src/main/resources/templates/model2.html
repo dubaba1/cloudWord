@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>dulaoc</title>
+    <!-- 引入 echarts.js -->
+    <link rel="icon" href="../images/logo2.png" type="image/x-icon"/>
+    
+    <link href="../static/css/body.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts-en.common.min.js"></script>
+ <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+</head>
+ 
+<body class="signin1">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+   <div class="container">
+   <div class="navbar-header">
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+       <span class="sr-only">Toggle navigation</span>
+     </button>
+     <a class="navbar-brand" href="/" >首页</a>
+   </div>
+
+ </div>
+</div>
+
+<div style="height:700px">
+ <div id="main1" style="width:50%;height:400px;margin_left:500px"></div>
+</div>
+<script th:inline="javascript">
+var wordJsonString = [[${result}]];
+var wordJsonArray = eval(wordJsonString);
+
+var xAxisList = [];
+var yAxisList = [];
+for (let item of wordJsonArray){
+    xAxisList.push(item.name);
+    yAxisList.push(item.value);
+}
+</script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main1'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            color: function (params) {
+                        var colorList = ['#BA55D3', '#f67287', '#f29e3c', '#c05bdd', '#7a65f2','#8A2BE2']; //每根柱子的颜色
+                        return colorList[params.dataIndex];
+                    },
+             tooltip: {},  <!-- 鼠标放上去会显示数据 -->
+            title: {
+                text: '爬取新闻数量'
+            },
+            legend: {
+                data:['卡路里卡路里']
+            },
+            xAxis: {
+            	name:'日期',
+                data:xAxisList
+            },
+            yAxis: {
+
+                type: 'value'
+            },
+            series: [{
+                name: '数量',
+                type: 'bar',
+                data: yAxisList
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+
+ <!-- style="background: #18c8f6"  -->
+</body>
+</html>
