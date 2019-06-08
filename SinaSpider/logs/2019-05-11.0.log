@@ -1,0 +1,77 @@
+2019-05-11 09:28:03.210  INFO 8792 --- [main] club.p9j7.Application                    : Starting Application on dulaoc with PID 8792 (C:\Users\86156\Desktop\SinaSpider\target\classes started by 86156 in C:\Users\86156\Desktop\SinaSpider)
+2019-05-11 09:28:03.213  INFO 8792 --- [main] club.p9j7.Application                    : No active profile set, falling back to default profiles: default
+2019-05-11 09:28:04.034  INFO 8792 --- [main] club.p9j7.Application                    : Started Application in 1.201 seconds (JVM running for 1.715)
+2019-05-11 09:30:57.982  INFO   --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [testSpiderMan], using SpringBootContextLoader
+2019-05-11 09:30:57.988  INFO   --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [testSpiderMan]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-11 09:30:58.128  INFO   --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-11 09:30:58.142  INFO   --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6cf0e0ba, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7d8995e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@130d63be, org.springframework.test.context.support.DirtiesContextTestExecutionListener@42a48628, org.springframework.test.context.transaction.TransactionalTestExecutionListener@293a5bf6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6aeb35e6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1283bb96, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@74f0ea28, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@f6efaab, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3c19aaa5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3349e9bb]
+2019-05-11 09:30:58.440  INFO 10280 --- [main] testSpiderMan                            : Starting testSpiderMan on dulaoc with PID 10280 (started by 86156 in C:\Users\86156\Desktop\SinaSpider)
+2019-05-11 09:30:58.441  INFO 10280 --- [main] testSpiderMan                            : No active profile set, falling back to default profiles: default
+2019-05-11 09:30:59.353  INFO 10280 --- [main] testSpiderMan                            : Started testSpiderMan in 1.173 seconds (JVM running for 1.931)
+2019-05-11 09:31:00.290  INFO 10280 --- [main] us.codecraft.webmagic.Spider             : Spider feed.mix.sina.com.cn started!
+2019-05-11 09:31:00.659  INFO 10280 --- [pool-2-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success https://feed.mix.sina.com.cn/api/roll/get?pageid=153&lid=2509&k=&num=50&page=1&r=0.05788510884168385&callback=jQuery1112048951531526572656_1556626211539&_=1556626211540
+2019-05-11 09:31:01.004  INFO 10280 --- [pool-2-thread-2] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/stock/y/2019-05-11/doc-ihvhiqax7973062.shtml
+2019-05-11 09:31:01.004  INFO 10280 --- [pool-2-thread-5] u.c.w.downloader.HttpClientDownloader    : downloading page success https://tech.sina.com.cn/d/v/2019-05-11/doc-ihvhiews1163115.shtml
+2019-05-11 09:31:01.005  INFO 10280 --- [pool-2-thread-3] u.c.w.downloader.HttpClientDownloader    : downloading page success https://tech.sina.com.cn/d/f/2019-05-11/doc-ihvhiqax7972392.shtml
+2019-05-11 09:31:01.007  INFO 10280 --- [pool-2-thread-4] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/roll/2019-05-11/doc-ihvhiqax7972435.shtml
+2019-05-11 09:31:01.008  INFO 10280 --- [pool-2-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/c/2019-05-11/doc-ihvhiqax7971732.shtml
+2019-05-11 09:31:01.070  INFO 10280 --- [pool-2-thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-11 09:31:01.266  INFO 10280 --- [pool-2-thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-11 09:31:01.489  INFO 10280 --- [pool-2-thread-3] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/roll/2019-05-11/doc-ihvhiqax7971559.shtml
+2019-05-11 09:31:01.502  INFO 10280 --- [pool-2-thread-4] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/stock/usstock/c/2019-05-11/doc-ihvhiews1162529.shtml
+2019-05-11 09:31:01.516  INFO 10280 --- [pool-2-thread-2] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/stock/y/2019-05-11/doc-ihvhiqax7971491.shtml
+2019-05-11 09:31:01.535  INFO 10280 --- [pool-2-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/roll/2019-05-11/doc-ihvhiqax7971447.shtml
+2019-05-11 09:31:01.537  INFO 10280 --- [pool-2-thread-5] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/stock/s/2019-05-11/doc-ihvhiews1162336.shtml
+2019-05-11 09:31:01.637  INFO 10280 --- [pool-2-thread-3] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/china/2019-05-11/doc-ihvhiews1162325.shtml
+2019-05-11 09:31:01.681  INFO 10280 --- [pool-2-thread-4] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/w/2019-05-11/doc-ihvhiqax7971741.shtml
+2019-05-11 09:31:01.691  INFO 10280 --- [pool-2-thread-2] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/s/2019-05-11/doc-ihvhiews1162099.shtml
+2019-05-11 09:31:01.711  INFO 10280 --- [pool-2-thread-5] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/o/2019-05-11/doc-ihvhiews1161320.shtml
+2019-05-11 09:31:01.713  INFO 10280 --- [pool-2-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/c/2019-05-11/doc-ihvhiews1160756.shtml
+2019-05-11 09:31:01.787  INFO 10280 --- [pool-2-thread-3] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/c/2019-05-11/doc-ihvhiqax7968722.shtml
+2019-05-11 09:31:01.824  INFO 10280 --- [pool-2-thread-4] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/o/2019-05-11/doc-ihvhiqax7969198.shtml
+2019-05-11 09:31:01.848  INFO 10280 --- [pool-2-thread-2] u.c.w.downloader.HttpClientDownloader    : downloading page success https://tech.sina.com.cn/mobile/n/n/2019-05-11/doc-ihvhiews1160034.shtml
+2019-05-11 09:31:01.853 ERROR 10280 --- [pool-2-thread-2] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-11/doc-ihvhiews1160034.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-11 09:31:01.853  INFO 10280 --- [pool-2-thread-5] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/w/2019-05-11/doc-ihvhiews1163961.shtml
+2019-05-11 09:31:01.889  INFO 10280 --- [pool-2-thread-2] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/c/2019-05-11/doc-ihvhiews1160126.shtml
+2019-05-11 09:31:01.891  INFO 10280 --- [pool-2-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/stock/s/2019-05-11/doc-ihvhiews1159909.shtml
+2019-05-11 09:31:01.941  INFO 10280 --- [pool-2-thread-3] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/stock/s/2019-05-11/doc-ihvhiews1159401.shtml
+2019-05-11 09:31:01.957  INFO 10280 --- [pool-2-thread-4] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/o/2019-05-11/doc-ihvhiqax7967887.shtml
+2019-05-11 09:31:01.993  INFO 10280 --- [pool-2-thread-5] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/o/2019-05-11/doc-ihvhiqax7968510.shtml
+2019-05-11 09:31:02.028  INFO 10280 --- [pool-2-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/c/2019-05-11/doc-ihvhiews1161275.shtml
+2019-05-11 09:31:02.028  INFO 10280 --- [pool-2-thread-2] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/roll/2019-05-11/doc-ihvhiews1159898.shtml
+2019-05-11 09:31:02.095  INFO 10280 --- [pool-2-thread-3] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/stock/usstock/c/2019-05-11/doc-ihvhiqax7967346.shtml
+2019-05-11 09:31:02.122  INFO 10280 --- [pool-2-thread-4] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/chanjing/gsnews/2019-05-11/doc-ihvhiews1158718.shtml
+2019-05-11 09:31:02.139  INFO 10280 --- [pool-2-thread-5] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/s/2019-05-11/doc-ihvhiews1159991.shtml
+2019-05-11 09:31:02.162  INFO 10280 --- [pool-2-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/chanjing/gsnews/2019-05-11/doc-ihvhiews1158413.shtml
+2019-05-11 09:31:02.248  INFO 10280 --- [pool-2-thread-2] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/stock/s/2019-05-11/doc-ihvhiews1158292.shtml
+2019-05-11 09:31:02.258  INFO 10280 --- [pool-2-thread-3] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/s/2019-05-11/doc-ihvhiqax7966717.shtml
+2019-05-11 09:31:02.274  INFO 10280 --- [pool-2-thread-4] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/china/2019-05-11/doc-ihvhiews1158129.shtml
+2019-05-11 09:31:02.301  INFO 10280 --- [pool-2-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success https://news.sina.com.cn/s/2019-05-11/doc-ihvhiews1163193.shtml
+2019-05-11 09:31:02.310  INFO 10280 --- [pool-2-thread-5] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/roll/2019-05-11/doc-ihvhiews1158219.shtml
+2019-05-11 09:31:02.393  INFO 10280 --- [pool-2-thread-3] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/china/2019-05-11/doc-ihvhiqax7965699.shtml
+2019-05-11 09:31:02.394  INFO 10280 --- [pool-2-thread-2] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/stock/s/2019-05-11/doc-ihvhiews1157212.shtml
+2019-05-11 09:31:02.414  INFO 10280 --- [pool-2-thread-4] u.c.w.downloader.HttpClientDownloader    : downloading page success https://tech.sina.com.cn/i/2019-05-11/doc-ihvhiqax7966282.shtml
+2019-05-11 09:31:02.444  INFO 10280 --- [pool-2-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/stock/s/2019-05-11/doc-ihvhiews1156990.shtml
+2019-05-11 09:31:02.465  INFO 10280 --- [pool-2-thread-5] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/stock/s/2019-05-11/doc-ihvhiqax7965503.shtml
+2019-05-11 09:31:02.531  INFO 10280 --- [pool-2-thread-2] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/stock/s/2019-05-11/doc-ihvhiqax7965407.shtml
+2019-05-11 09:31:02.546  INFO 10280 --- [pool-2-thread-3] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/stock/hkstock/hkstocknews/2019-05-11/doc-ihvhiews1156935.shtml
+2019-05-11 09:31:02.574  INFO 10280 --- [pool-2-thread-4] u.c.w.downloader.HttpClientDownloader    : downloading page success https://finance.sina.com.cn/roll/2019-05-11/doc-ihvhiqax7965872.shtml
+2019-05-11 09:31:02.585  INFO 10280 --- [pool-2-thread-1] u.c.w.downloader.HttpClientDownloader    : downloading page success https://tech.sina.com.cn/i/2019-05-11/doc-ihvhiews1156796.shtml
+2019-05-11 09:31:02.715  INFO 10280 --- [main] us.codecraft.webmagic.Spider             : Spider feed.mix.sina.com.cn closed! 45 pages downloaded.
+2019-05-11 09:31:02.720  INFO 10280 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-11 09:31:02.722  INFO 10280 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

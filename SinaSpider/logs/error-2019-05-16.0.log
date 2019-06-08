@@ -1,0 +1,1158 @@
+2019-05-16 07:13:38.678 ERROR 14024 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='https://finance.sina.com.cn/stock/usstock/clues/zs/2019-05-13/doc-ihvhiews1482101.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+### The error may exist in club/p9j7/mapper/SinaNewsMapper.java (best guess)
+### The error may involve club.p9j7.mapper.SinaNewsMapper.insertNews-Inline
+### The error occurred while setting parameters
+### SQL: insert into sinanews2(title,content,keyword,newsTime) value (?,?,?,?)
+### Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy49.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy53.insertNews(Unknown Source)
+	at club.p9j7.spider.SinaPipeline.process(SinaPipeline.java:20)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:418)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy68.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 14 common frames omitted
+
+2019-05-16 07:14:10.411 ERROR 14024 --- [pool-2-thread-5] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-13/doc-ihvhiqax8283947.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:14:12.222 ERROR 14024 --- [pool-2-thread-2] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/n/k/2019-05-13/doc-ihvhiqax8276374.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:14:12.414 ERROR 14024 --- [pool-2-thread-2] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-13/doc-ihvhiews1466733.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:14:13.369 ERROR 14024 --- [pool-2-thread-2] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/it/2019-05-13/doc-ihvhiqax8273667.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:14:13.582 ERROR 14024 --- [pool-2-thread-3] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-13/doc-ihvhiews1463504.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:14:14.788 ERROR 14024 --- [pool-2-thread-4] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-13/doc-ihvhiqax8270893.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:14:18.659 ERROR 14024 --- [pool-2-thread-4] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-13/doc-ihvhiews1455812.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:14:32.995 ERROR 14024 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='https://finance.sina.com.cn/stock/usstock/clues/hg/2019-05-12/doc-ihvhiqax8030344.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x95, ...' for column 'content' at row 1
+### The error may exist in club/p9j7/mapper/SinaNewsMapper.java (best guess)
+### The error may involve club.p9j7.mapper.SinaNewsMapper.insertNews-Inline
+### The error occurred while setting parameters
+### SQL: insert into sinanews2(title,content,keyword,newsTime) value (?,?,?,?)
+### Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x95, ...' for column 'content' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\xF0\x9F\x93\x95, ...' for column 'content' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x95, ...' for column 'content' at row 1
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy49.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy53.insertNews(Unknown Source)
+	at club.p9j7.spider.SinaPipeline.process(SinaPipeline.java:20)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:418)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x95, ...' for column 'content' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy68.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 14 common frames omitted
+
+2019-05-16 07:14:49.616 ERROR 14024 --- [pool-2-thread-3] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/i/2019-05-12/doc-ihvhiews1326656.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:15:05.929 ERROR 14024 --- [pool-2-thread-5] us.codecraft.webmagic.Spider             : process request Request{url='https://finance.sina.com.cn/stock/usstock/clues/hg/2019-05-11/doc-ihvhiqax7996558.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE4\xB8...' for column 'content' at row 1
+### The error may exist in club/p9j7/mapper/SinaNewsMapper.java (best guess)
+### The error may involve club.p9j7.mapper.SinaNewsMapper.insertNews-Inline
+### The error occurred while setting parameters
+### SQL: insert into sinanews2(title,content,keyword,newsTime) value (?,?,?,?)
+### Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE4\xB8...' for column 'content' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\xF0\x9F\x93\x85\xE4\xB8...' for column 'content' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE4\xB8...' for column 'content' at row 1
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy49.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy53.insertNews(Unknown Source)
+	at club.p9j7.spider.SinaPipeline.process(SinaPipeline.java:20)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:418)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE4\xB8...' for column 'content' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy68.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 14 common frames omitted
+
+2019-05-16 07:15:08.945 ERROR 14024 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-11/doc-ihvhiqax8014807.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:15:17.521 ERROR 14024 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-11/doc-ihvhiews1160034.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:15:19.143 ERROR 14024 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-11/doc-ihvhiqax7964856.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:15:19.479 ERROR 14024 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-11/doc-ihvhiews1155224.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:15:19.503 ERROR 14024 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-11/doc-ihvhiqax7963747.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:15:22.916 ERROR 14024 --- [pool-2-thread-3] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-11/doc-ihvhiews1149165.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:15:44.533 ERROR 14024 --- [pool-2-thread-2] us.codecraft.webmagic.Spider             : process request Request{url='https://finance.sina.com.cn/stock/usstock/clues/zs/2019-05-10/doc-ihvhiews0951514.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+### The error may exist in club/p9j7/mapper/SinaNewsMapper.java (best guess)
+### The error may involve club.p9j7.mapper.SinaNewsMapper.insertNews-Inline
+### The error occurred while setting parameters
+### SQL: insert into sinanews2(title,content,keyword,newsTime) value (?,?,?,?)
+### Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy49.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy53.insertNews(Unknown Source)
+	at club.p9j7.spider.SinaPipeline.process(SinaPipeline.java:20)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:418)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy68.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 14 common frames omitted
+
+2019-05-16 07:16:08.197 ERROR 14024 --- [pool-2-thread-5] us.codecraft.webmagic.Spider             : process request Request{url='https://finance.sina.com.cn/china/gncj/2019-05-10/doc-ihvhiqax7797241.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x91\x87, ...' for column 'content' at row 1
+### The error may exist in club/p9j7/mapper/SinaNewsMapper.java (best guess)
+### The error may involve club.p9j7.mapper.SinaNewsMapper.insertNews-Inline
+### The error occurred while setting parameters
+### SQL: insert into sinanews2(title,content,keyword,newsTime) value (?,?,?,?)
+### Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x91\x87, ...' for column 'content' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\xF0\x9F\x91\x87, ...' for column 'content' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\xF0\x9F\x91\x87, ...' for column 'content' at row 1
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy49.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy53.insertNews(Unknown Source)
+	at club.p9j7.spider.SinaPipeline.process(SinaPipeline.java:20)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:418)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x91\x87, ...' for column 'content' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy68.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 14 common frames omitted
+
+2019-05-16 07:16:18.789 ERROR 14024 --- [pool-2-thread-5] us.codecraft.webmagic.Spider             : process request Request{url='https://finance.sina.com.cn/china/2019-05-10/doc-ihvhiews0953753.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x91\x89\xE9\x87...' for column 'content' at row 1
+### The error may exist in club/p9j7/mapper/SinaNewsMapper.java (best guess)
+### The error may involve club.p9j7.mapper.SinaNewsMapper.insertNews-Inline
+### The error occurred while setting parameters
+### SQL: insert into sinanews2(title,content,keyword,newsTime) value (?,?,?,?)
+### Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x91\x89\xE9\x87...' for column 'content' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\xF0\x9F\x91\x89\xE9\x87...' for column 'content' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\xF0\x9F\x91\x89\xE9\x87...' for column 'content' at row 1
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy49.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy53.insertNews(Unknown Source)
+	at club.p9j7.spider.SinaPipeline.process(SinaPipeline.java:20)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:418)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x91\x89\xE9\x87...' for column 'content' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy68.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 14 common frames omitted
+
+2019-05-16 07:16:23.231 ERROR 14024 --- [pool-2-thread-4] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-10/doc-ihvhiqax7749688.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:16:24.950 ERROR 14024 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-10/doc-ihvhiqax7745674.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:16:25.909 ERROR 14024 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-10/doc-ihvhiews0933697.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:16:26.398 ERROR 14024 --- [pool-2-thread-2] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/it/2019-05-10/doc-ihvhiews0933471.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:16:51.709 ERROR 14024 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='https://finance.sina.com.cn/stock/usstock/clues/zs/2019-05-09/doc-ihvhiews0730674.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+### The error may exist in club/p9j7/mapper/SinaNewsMapper.java (best guess)
+### The error may involve club.p9j7.mapper.SinaNewsMapper.insertNews-Inline
+### The error occurred while setting parameters
+### SQL: insert into sinanews2(title,content,keyword,newsTime) value (?,?,?,?)
+### Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy49.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy53.insertNews(Unknown Source)
+	at club.p9j7.spider.SinaPipeline.process(SinaPipeline.java:20)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:418)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy68.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 14 common frames omitted
+
+2019-05-16 07:16:52.440 ERROR 14024 --- [pool-2-thread-5] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/it/2019-05-09/doc-ihvhiews0847456.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:17:31.943 ERROR 14024 --- [pool-2-thread-4] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-09/doc-ihvhiews0712980.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:17:31.986 ERROR 14024 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-09/doc-ihvhiqax7523386.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:17:37.044 ERROR 14024 --- [pool-2-thread-3] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-09/doc-ihvhiqax7512214.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:17:41.125 ERROR 14024 --- [pool-2-thread-2] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/apple/if/2019-05-09/doc-ihvhiews0697576.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:17:59.173 ERROR 14024 --- [pool-2-thread-5] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/it/2019-05-08/doc-ihvhiews0639210.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:18:01.375 ERROR 14024 --- [pool-2-thread-5] us.codecraft.webmagic.Spider             : process request Request{url='https://finance.sina.com.cn/stock/usstock/clues/zs/2019-05-08/doc-ihvhiqax7318967.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+### The error may exist in club/p9j7/mapper/SinaNewsMapper.java (best guess)
+### The error may involve club.p9j7.mapper.SinaNewsMapper.insertNews-Inline
+### The error occurred while setting parameters
+### SQL: insert into sinanews2(title,content,keyword,newsTime) value (?,?,?,?)
+### Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy49.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy53.insertNews(Unknown Source)
+	at club.p9j7.spider.SinaPipeline.process(SinaPipeline.java:20)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:418)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy68.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 14 common frames omitted
+
+2019-05-16 07:18:10.771 ERROR 14024 --- [pool-2-thread-2] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/it/2019-05-08/doc-ihvhiqax7414949.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:18:25.498 ERROR 14024 --- [pool-2-thread-2] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/apple/ip/2019-05-08/doc-ihvhiews0540857.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:18:34.467 ERROR 14024 --- [pool-2-thread-5] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/it/2019-05-08/doc-ihvhiqax7317693.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:18:35.189 ERROR 14024 --- [pool-2-thread-4] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/it/2019-05-08/doc-ihvhiews0507333.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:18:38.103 ERROR 14024 --- [pool-2-thread-3] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-08/doc-ihvhiqax7305078.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:18:41.882 ERROR 14024 --- [pool-2-thread-2] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-08/doc-ihvhiqax7296653.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:19:01.183 ERROR 14024 --- [pool-2-thread-2] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/it/2019-05-07/doc-ihvhiqax7247170.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:19:10.132 ERROR 14024 --- [pool-2-thread-4] us.codecraft.webmagic.Spider             : process request Request{url='https://finance.sina.com.cn/stock/usstock/clues/zs/2019-05-07/doc-ihvhiews0283702.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+### The error may exist in club/p9j7/mapper/SinaNewsMapper.java (best guess)
+### The error may involve club.p9j7.mapper.SinaNewsMapper.insertNews-Inline
+### The error occurred while setting parameters
+### SQL: insert into sinanews2(title,content,keyword,newsTime) value (?,?,?,?)
+### Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy49.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy53.insertNews(Unknown Source)
+	at club.p9j7.spider.SinaPipeline.process(SinaPipeline.java:20)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:418)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x93\x85\xE6\x9C...' for column 'content' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy68.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 14 common frames omitted
+
+2019-05-16 07:19:18.123 ERROR 14024 --- [pool-2-thread-3] us.codecraft.webmagic.Spider             : process request Request{url='https://news.sina.com.cn/s/2019-05-07/doc-ihvhiqax7173362.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+org.springframework.jdbc.UncategorizedSQLException: 
+### Error updating database.  Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x97\xA3\xE7\xBD...' for column 'content' at row 1
+### The error may exist in club/p9j7/mapper/SinaNewsMapper.java (best guess)
+### The error may involve club.p9j7.mapper.SinaNewsMapper.insertNews-Inline
+### The error occurred while setting parameters
+### SQL: insert into sinanews2(title,content,keyword,newsTime) value (?,?,?,?)
+### Cause: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x97\xA3\xE7\xBD...' for column 'content' at row 1
+; uncategorized SQLException; SQL state [HY000]; error code [1366]; Incorrect string value: '\xF0\x9F\x97\xA3\xE7\xBD...' for column 'content' at row 1; nested exception is java.sql.SQLException: Incorrect string value: '\xF0\x9F\x97\xA3\xE7\xBD...' for column 'content' at row 1
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:89)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:73)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:446)
+	at com.sun.proxy.$Proxy49.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:278)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:59)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:58)
+	at com.sun.proxy.$Proxy53.insertNews(Unknown Source)
+	at club.p9j7.spider.SinaPipeline.process(SinaPipeline.java:20)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:418)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLException: Incorrect string value: '\xF0\x9F\x97\xA3\xE7\xBD...' for column 'content' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:970)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:387)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy68.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:198)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:185)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:433)
+	... 14 common frames omitted
+
+2019-05-16 07:19:23.856 ERROR 14024 --- [pool-2-thread-2] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/it/2019-05-07/doc-ihvhiqax7161678.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:19:35.662 ERROR 14024 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/i/2019-05-07/doc-ihvhiqax7113705.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:19:41.957 ERROR 14024 --- [pool-2-thread-5] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/it/2019-05-07/doc-ihvhiews0272540.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:19:47.873 ERROR 14024 --- [pool-2-thread-1] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/i/2019-05-07/doc-ihvhiqax7073652.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:19:48.287 ERROR 14024 --- [pool-2-thread-2] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-07/doc-ihvhiqax7071275.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:19:50.481 ERROR 14024 --- [pool-2-thread-4] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/mobile/n/n/2019-05-07/doc-ihvhiews0258552.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+2019-05-16 07:20:00.342 ERROR 14024 --- [pool-2-thread-5] us.codecraft.webmagic.Spider             : process request Request{url='https://tech.sina.com.cn/n/n/2019-05-07/doc-ihvhiqax7041258.shtml', method='null', extras=null, priority=0, headers={}, cookies={}} error
+
+java.lang.NullPointerException: text
+	at java.util.Objects.requireNonNull(Objects.java:228)
+	at java.time.format.DateTimeFormatter.parse(DateTimeFormatter.java:1848)
+	at java.time.LocalDateTime.parse(LocalDateTime.java:492)
+	at club.p9j7.spider.SinaSpider.process(SinaSpider.java:52)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
